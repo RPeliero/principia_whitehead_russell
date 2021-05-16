@@ -1,0 +1,122 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+\title{Principia Mathematica}
+\author{Une lecture des textes d'A.N. Whitehead et B. Russell}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section{Préambules : Fondements axiomatiques et définitionnels}
+
+\subsection{Une recherche d'un système d'axiomes incontestable, consistant, et optimal}
+
+\subsubsection{Objectif}
+
+L'objectif, dans cette construction, est de refonder les mathématiques sur des bases indiscutables. Sur une axiomatique incontestable. Que les mathématiques ne se contentent plus d'être "\textit{valides}", mais découlent de notre interprétation des règles de la logique formelle. En ce sens, on pourra ainsi dire qu'elles sont "\textit{vraies}".
+
+\subsubsection{Conséquences d'un système d'axiomes}
+
+Ici, par ailleurs, on ne souhaite pas disposer d'un système d'axiomes qui viendrait contredire des propriétés fondamentales des mathématiques, comme "$2+3=5$". Ainsi, si par la suite, un système d'axiomes semblant logiquement bien fondé, conduit à une conclusion contredisant cette égalité, il sera entrepris de le modifier.
+
+En revanche, s'il advient que l'on conclue des axiomes posés comme fondements des théorèmes semblant être à la frontière de l'idée que l'on se fait de la vérité, il faudra peut être sacrifier cette idée préconçue, au profit du bien fondé de notre axiomatique.
+
+\subsubsection{Éviter les redondances}
+
+On souhaite également admettre le moins de propositions possibles. Idéalement, on souhaite disposer d'un système axiomatique exempt de toute redondance. À savoir qu'aucune de nos prémisses ne peut se déduire des autres. Cependant, il est en pratique excessivement difficile, si ce n'est impossible, d'avoir la certitude que nous disposions en effet d'un tel système. Le mieux que l'on puisse faire est encore de modifier le système dès lors que l'on repère une redondance.
+
+\subsubsection{Éviter les contradictions}
+
+On souhaite également développer un système qui ne permet pas de prouver une proposition et sa négation. De même que précédemment, on se contentera de corriger les axiomes, dans le cas où l'on trouverait des contradictions.
+
+\subsection{Idées primitives}
+
+\subsubsection{Variable}
+
+On souhaite tout d'abord considérer la notion de \textit{variable}. Ici, on distinguera deux notions de variables, à savoir d'une part les \textit{variables réelles}, et d'autre part les \textit{variables parentes}. Par la suite nous allons nous concentrer sur les premières. Les secondes seront réintroduites lorsque leur emploi sera de circonstance.
+\\
+
+Les variables réelles ne doivent pas être comprises dans le sens "variables prenant des valeurs dans l'ensemble des nombres réels", puisque les notions de nombres, de cardinaux, d'ensembles, ou encore de nombres réels, n'ont pas encore été définies. Il va plutôt s'agir d'entités plus abstraites, parfois appelées \textit{individus} - nous définirons cette notion par la suite. 
+
+En revanche, elles partagent la notion de représentation avec l'idée que l'on se fait intuitivement d'une variable en mathématiques : la variable $x$ de l'égalité définitionnelle de la fonction $f$ ci-dessous peut très bien être remplacée par différentes valeurs, comme les nombres réels $\pi$ ou $5\sqrt{2}$.
+
+$$f(x) := 3x + 7$$
+
+Ici, la variable $x$ décrit de manière ambigüe l'intégralité des valeurs possibles, sans aucune préférence. Il en ira de même pour notre notion plus abstraite de variable réelle.
+\\
+
+On se servira par la suite généralement des lettres minuscules $x,y,z,w$ pour noter nos variables réelles. De même, pour noter la notion de $valeur$ ou encore de $constante$, par laquelle ou pourrait remplacer nos variables, on se servira généralement des lettres miniscules $a,b,c$. Il se pourra cependant que certaines autres lettres servent, selon le contexte, par soucis de clarté, généralement.
+
+\subsubsection{Proposition élémentaire}
+
+De plus, on souhaite disposer d'objets dont on pourra évaluer la valeur de vérité - dès lors que cette notion sera définie, ce que nous ferons par la suite. Un tel objet, pourrait naïvement être qualifié d'énoncé, et nous emploirons pour notre part, le terme de \textit{proposition}. Une proposition ne faisant appel à aucune variable, ni aucune notion de généralité -tel qu'un "il existe", ou un "pour tout", ou encore un "tant que"- sera qualifiée de \textit{proposition élémentaire}.
+
+Il va de soi que nous ne nous intéresserons pas à la nature particulière de chaque proposition élémentaire, mais bien aux lois générales qui régissent leurs interactions, les unes avec les autres.
+\\
+
+Pour désigner des propositions élémentaires, on se servira des lettres minuscules $p,q,r,s$.
+\\
+
+\subsubsection{Fonction propositionnelle élémentaire}
+
+Il nous faudra également nous servir de propositions faisant intervenir des variables. On dira qu'un énoncé faisant intervenir une ou plusieurs variables, mais ne comportant pas de quantificateurs, est une \textit{fonction propositionnelle élémentaire}.
+
+Par exemple, l'énoncé "Socrate est mortel" est une proposition élémentaire, tandis que l'énoncé "$y$ est bleu" est une fonction propositionnelle élémentaire. Pour obtenir une proposition de cette dernière, il faut remplacer la variable $y$ par une constante.
+
+De même que pour une table de vérité, on peut visualiser une fonction propositionnelle comme la liste de toutes les valeurs que pourraient prendre ses variables. 
+Il n'est pas ici question de savoir si l'on peut effectivement lister toutes les possibilités : il ne s'agit que d'une visualisation prenant appui sur des notions avec lesquelles nous sommes plus familiers.
+\\
+
+On utilisera généralement les notations $\phi x,\psi  x, \chi y$ pour désigner une variable propositionnelle, désignant de manière ambigüe, là encore, n'importe quelle valeur de $x$ prise dans la fonction propositionnelle élémentaire. 
+
+Si l'on souhaite, en revanche, désigner les fonctions propositionnelles en elles-même, on notera alors $\phi  \hat{x}, \psi \hat{x}, \chi \hat{y}$. Dans ce cas, le symbole $\hat{x}$ ne fait absolument pas jouer à $x$ un rôle particulier. 
+Il est identique de parler de $\phi \hat{x}, \phi \hat{y}$, ou encore $\phi \hat{z}$. Ainsi, dans le cas de deux fonctions propositionnelles élémentaires $\phi\hat{x}$ et $\psi \hat{x}$, aucune importance n'est à accorder au fait que les deux disposent du symbole $\hat{x}$. 
+\\
+
+\textbf{Remarque importante}
+
+Une fonction sera -contrairement à l'expérience que l'on en a ordinairement en mathématiques- définie à partir des valeurs qu'elles pourra prendre. Il ne s'agira pas de parler d'une fonction et de l'évaluer en différentes constantes, pour connaître les valeurs qu'elle atteindra. Cette idée est centrale dans notre construction, afin d'éviter des raisonnements cycliques ainsi que des définitions qui bouclent sur elles-même. Pour parler d'une fonction, on commencera toujours par définir les valeurs qu'elles peut prendre, avant d'énoncer quoique ce soit sur elle.
+
+\subsubsection{Assertion, et assertion d'une fonction propositionnelle}
+
+La notion d'\textit{assertion} se divise en deux catégories, selon qu'elle s'applique à des propositions élémentaires, ou à des fonctions propositionnelles élémentaires. Grossièrement, la notion d'assertion va nous servir de valeur de vérité, tout au long de nos raisonnements. 
+
+Lorsque nous ferons l'assertion d'une proposition, cela reviendra, en un sens, à considérer que dans notre système, cette proposition est vraie. À l'inverse, on ne pourra faire l'assertion d'une proposition fausse.
+\\
+
+On utilisera le symbole $\vdash$ pour l'assertion, dans tous les cas de figure -proposition ou fonction propositionnelle. Par exemple, la notation $\vdash.p$ peut être interprêtée comme "la proposition $p$ est vraie". On remarque par ailleurs l'utilisation de points pour séparer chaque symbole ou objet du suivant.
+
+On pourra cependant se permettre de considérer des chaînes de symboles sans pour autant en faire l'assertion préalable. L'ordre de raisonnement sera d'ailleurs inverse : on cherchera à montrer que l'on peut raisonnablement - en vue de la démonstration fournie - faire l'assertion d'une proposition donnée.
+\\
+
+On fera également l'assertion de fonctions propositionnelles, par exemple "$\vdash \phi x$ ". Dans ce cas, il s'agira de dire que n'importe quelle valeur de cette fonction propositionnelle sera vraie. 
+
+Cela est différent de l'assertion "la fonction propositionnelle est vraie pour toute valeur de $x$", assertion qui concerne toutes les valeurs possibles de $x$ à la fois, et non chacune individuellement.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
